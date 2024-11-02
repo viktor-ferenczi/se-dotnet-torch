@@ -1,4 +1,4 @@
-# Torch Server for SE on .NET 8.0
+# Running Torch on .NET 8.0
 
 Here you can find the Space Engineers Torch Server ported to .NET 8.0.
 

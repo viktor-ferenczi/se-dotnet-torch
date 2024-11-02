@@ -61,7 +61,7 @@ var isOldDotNetFramework = Environment.Version.Major < 5;
 
 ## Credits
 
-`*` The `PatchManager` code was copied from [PvPTeam Torch](https://github.com/PveTeam/Torch) in order to avoid duplicating that work. The changes were made by `zznty`. That repo contains another solution to run Torch on recent .NET.
+`*` The `PatchManager` code was copied from [PvPTeam Torch](https://github.com/PveTeam/Torch) (Apache License Version 2.0) in order to avoid duplicating that work. The changes were made by `zznty`. That repo contains another solution to run Torch on recent .NET.
 
 ## References
 

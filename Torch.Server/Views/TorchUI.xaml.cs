@@ -1,23 +1,15 @@
-﻿using System;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Timers;
+using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using NLog;
 using NLog.Config;
 using NLog.Targets.Wrappers;
-using Sandbox;
 using Torch.API;
 using Torch.API.Managers;
 using Torch.Patches;
@@ -76,7 +68,7 @@ namespace Torch.Server
 
             Themes.uiSource = this;
             Themes.SetConfig(_config);
-            Title = $"{_config.InstanceName} - Torch {server.TorchVersion}, SE {server.GameVersion}";
+            Title = $"{_config.InstanceName} - Torch {server.TorchVersion}, SE {server.GameVersion}, {RuntimeInformation.FrameworkDescription}";
             Instance = this;
             
             Loaded += TorchUI_Loaded;

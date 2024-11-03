@@ -50,7 +50,7 @@ For debugging run the `Torch.Server` project from your IDE.
 ## Compatibility
 
 - Harmony 2.3.3 is used for binary patching with a compatibility layer in place to support Torch patches. `*`
-- Plugins using transpiler patches may not work. Such patches need to be fixed to handle both the old and new .NET. 
+- Plugins using transpiler patches may not work. Such patches need to be fixed to handle both the old and new .NET.
 
 ### How to detect whether a plugin runs on .NET Framework 4.8 or .NET 8.0?
 
@@ -58,6 +58,10 @@ This was tested to work reliably:
 ```cs
 var isOldDotNetFramework = Environment.Version.Major < 5;
 ```
+
+### How to work easier on transpiler patches?
+
+I suggest using the [TranspilerHelper](https://github.com/viktor-ferenczi/se-dotnet-torch/blob/main/Torch/Utils/TranspilerHelpers.cs) to produce IL files of the original and patched code, so they can be diff'd and fixed easier. You can find usage examples in this repository. It works with both the Torch and Harmony transpiler patches.
 
 ## Credits
 
